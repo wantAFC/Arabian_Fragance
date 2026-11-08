@@ -57,7 +57,9 @@ export async function generateMetadata({
     ? product.description.substring(0, 160)
     : `Discover ${product.title}`;
 
-  const image = product.images.edges[0]?.node.url || "/assets/images/shop/product-fallback.png";
+  const image =
+    product.images.edges[0]?.node.url ||
+    "/assets/images/shop/product-fallback.png";
 
   return {
     title,

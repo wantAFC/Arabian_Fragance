@@ -4,7 +4,8 @@ import type { Locale } from "@/i18n-config";
 import type { Product } from "@/lib/shopify/actions";
 import { FOCUS_CLASS } from "@/components/navbar/search/focus-class";
 
-const SEARCH_PRODUCT_FALLBACK_IMAGE = "/assets/images/shop/product-fallback.png";
+const SEARCH_PRODUCT_FALLBACK_IMAGE =
+  "/assets/images/shop/product-fallback.png";
 
 export default function SearchProductCard({
   product,

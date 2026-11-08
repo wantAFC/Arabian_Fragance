@@ -5,7 +5,8 @@ import { getUiLabels } from "@/lib/i18n/uiLabels";
 import ShopifyRichText from "./ShopifyRichText";
 import type { LayeringProduct } from "@/lib/shopify/get-layering-attars";
 
-const LAYERING_PRODUCT_FALLBACK_IMAGE = "/assets/images/shop/product-fallback.png";
+const LAYERING_PRODUCT_FALLBACK_IMAGE =
+  "/assets/images/shop/product-fallback.png";
 
 type ProductLayeringProps = {
   products: LayeringProduct[];
@@ -70,7 +71,10 @@ export default function ProductLayering({
             >
               <div className="bg-background relative aspect-4/5 overflow-hidden">
                 <Image
-                  src={product.featuredImage?.url || LAYERING_PRODUCT_FALLBACK_IMAGE}
+                  src={
+                    product.featuredImage?.url ||
+                    LAYERING_PRODUCT_FALLBACK_IMAGE
+                  }
                   alt=""
                   fill
                   sizes="(min-width: 1024px) 170px, (min-width: 640px) 30vw, 45vw"

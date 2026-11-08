@@ -27,7 +27,8 @@ export default function ProductCard({
 
   const uniqueImages = Array.from(new Set((p.images ?? []).filter(Boolean)));
 
-  const primaryImage = uniqueImages[0] || p.image || "/assets/images/shop/product-fallback.png";
+  const primaryImage =
+    uniqueImages[0] || p.image || "/assets/images/shop/product-fallback.png";
 
   const hoverImage = uniqueImages[1] ?? null;
 

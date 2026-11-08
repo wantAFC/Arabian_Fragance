@@ -121,6 +121,7 @@ const categoryImages = {
 ## Naming Conventions
 
 ### Images
+
 - **Format**: `[purpose]-[variant]-[size].[extension]`
 - **Examples**:
   - `home-desktop.png` - Desktop version
@@ -129,37 +130,44 @@ const categoryImages = {
   - `preview.avif` - Modern format preview
 
 ### Logos
+
 - **Format**: `afc-[type]-[variant].[svg|png]`
 - **Types**: `mark` (icon), `wordmark` (text)
 - **Variants**: dark (default), `light`
 - **Examples**: `afc-mark.svg`, `afc-wordmark-light.svg`
 
 ### Fonts
+
 - **Format**: `[FontName]-[Variant].[woff2|otf|ttf]`
 - **Examples**: `BodoniModa-Variable.woff2`
 
 ## Best Practices
 
 ### 1. **Organize by Purpose** (not by format)
+
 - ✅ `/assets/images/hero/`, `/assets/images/shop/`
 - ❌ `/images/jpg/`, `/images/png/`
 
 ### 2. **Use Semantic Paths**
+
 - ✅ `/assets/images/shop/product-fallback.png`
 - ❌ `/assets/images/bottle.png`
 
 ### 3. **Optimize Images**
+
 - Use AVIF for modern browsers (with fallbacks)
 - Compress JPGs to 80-85% quality
 - Use WebP for shop images
 - Keep PNGs for graphics with transparency
 
 ### 4. **Responsive Image Sizing**
+
 - Always provide `width` and `height` to Image component
 - Use `sizes` attribute for responsive images
 - Example: `sizes="(min-width: 1024px) 50vw, 100vw"`
 
 ### 5. **Fallback Images**
+
 - Product images default to `/assets/images/shop/product-fallback.png`
 - Always provide `alt` text for accessibility
 - Use empty string only when image is decorative
@@ -167,18 +175,21 @@ const categoryImages = {
 ## Updates & Maintenance
 
 ### Adding New Assets
+
 1. Place in appropriate subdirectory under `/assets/images/` or `/assets/logos/`
 2. Use semantic naming following conventions
 3. Update this document with new additions
 4. Reference via absolute path: `/assets/[category]/[file]`
 
 ### Removing Assets
+
 1. Check all references across codebase
 2. Use grep to find usage: `grep -r "assets/images/[name]"`
 3. Update fallback values if needed
 4. Remove file and commit with explanation
 
 ### Refactoring
+
 - Maintain path consistency across all files
 - Update TypeScript types if paths change
 - Test all routes after reorganization

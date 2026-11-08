@@ -50,7 +50,10 @@ const FALLBACK_COLLECTIONS: Record<
   Record<TierKey, { title: string; imageSrc: string }>
 > = {
   en: {
-    luxury: { title: "Luxury Collection", imageSrc: "/assets/images/shop/bottle-men.png" },
+    luxury: {
+      title: "Luxury Collection",
+      imageSrc: "/assets/images/shop/bottle-men.png",
+    },
     premium: {
       title: "Premium Collection",
       imageSrc: "/assets/images/shop/premium-collection.png",
@@ -61,7 +64,10 @@ const FALLBACK_COLLECTIONS: Record<
     },
   },
   fi: {
-    luxury: { title: "Luxury-kokoelma", imageSrc: "/assets/images/shop/bottle-men.png" },
+    luxury: {
+      title: "Luxury-kokoelma",
+      imageSrc: "/assets/images/shop/bottle-men.png",
+    },
     premium: {
       title: "Premium-kokoelma",
       imageSrc: "/assets/images/shop/premium-collection.png",
