@@ -64,10 +64,10 @@ export default async function Home({ params }: PageProps) {
     title: dict.hero.title,
     subtitle: dict.hero.subtitle,
     desktopImage: {
-      url: "/hero/brand_hero.avif",
+      url: "/hero/afc-home-hero.png",
       altText: null,
-      width: 1920,
-      height: 1080,
+      width: 1672,
+      height: 941,
     },
     mobileImage: null,
     buttonLabel: dict.hero.ctaLabel,
