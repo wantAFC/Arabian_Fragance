@@ -5,6 +5,8 @@ import { getUiLabels } from "@/lib/i18n/uiLabels";
 import ShopifyRichText from "./ShopifyRichText";
 import type { LayeringProduct } from "@/lib/shopify/get-layering-attars";
 
+const LAYERING_PRODUCT_FALLBACK_IMAGE = "/assets/images/shop/product-fallback.png";
+
 type ProductLayeringProps = {
   products: LayeringProduct[];
   description?: string | null;
@@ -67,15 +69,13 @@ export default function ProductLayering({
               className="group block text-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
             >
               <div className="bg-background relative aspect-4/5 overflow-hidden">
-                {product.featuredImage && (
-                  <Image
-                    src={product.featuredImage.url}
-                    alt=""
-                    fill
-                    sizes="(min-width: 1024px) 170px, (min-width: 640px) 30vw, 45vw"
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] motion-reduce:transition-none"
-                  />
-                )}
+                <Image
+                  src={product.featuredImage?.url || LAYERING_PRODUCT_FALLBACK_IMAGE}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 170px, (min-width: 640px) 30vw, 45vw"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] motion-reduce:transition-none"
+                />
               </div>
 
               <h3 className="font-magister group-hover:text-gold mt-3 text-xs leading-relaxed font-normal text-neutral-900 transition-colors">
