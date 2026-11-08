@@ -57,7 +57,7 @@ export async function generateMetadata({
     ? product.description.substring(0, 160)
     : `Discover ${product.title}`;
 
-  const image = product.images.edges[0]?.node.url || "/catalog/Bottle_3.png";
+  const image = product.images.edges[0]?.node.url || "/assets/images/shop/product-fallback.png";
 
   return {
     title,
@@ -86,7 +86,7 @@ export default async function ProductPage({
 
   const images = product.images.edges.map(({ node }) => node);
 
-  const image = images[0]?.url || "/catalog/Bottle_3.png";
+  const image = images[0]?.url || "/assets/images/shop/product-fallback.png";
 
   const variant = product.variants.edges[0]?.node;
 

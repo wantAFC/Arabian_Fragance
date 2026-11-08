@@ -17,7 +17,7 @@ interface AboutSectionProps {
 }
 
 export default function AboutSection({
-  imageSrc = "/hero/story.jpg",
+  imageSrc = "/assets/images/hero/about-story.jpg",
   imageAlt,
   title,
   description,

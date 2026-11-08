@@ -58,9 +58,9 @@ const homeCategoryImagesQuery = `
 `;
 
 const FALLBACK_CATEGORY_IMAGES: HomeCategoryImages = {
-  women: { url: "/shop/hero-women.jpg", altText: null },
-  unisex: { url: "/shop/hero-unisex.jpg", altText: null },
-  men: { url: "/shop/hero-men.jpg", altText: null },
+  women: { url: "/assets/images/shop/hero-women.jpg", altText: null },
+  unisex: { url: "/assets/images/shop/hero-unisex.jpg", altText: null },
+  men: { url: "/assets/images/shop/hero-men.jpg", altText: null },
 };
 
 export async function getHomeCategoryImages(

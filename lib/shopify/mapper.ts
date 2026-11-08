@@ -171,7 +171,7 @@ export function normalizeProduct(p: ShopifyRawProduct): Product {
     ),
   );
 
-  let image = "/catalog/Bottle_3.png";
+  let image = "/assets/images/shop/product-fallback.png";
   if (p.image) {
     image = p.image;
   } else if (images[0]) {
