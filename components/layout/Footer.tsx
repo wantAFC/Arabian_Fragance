@@ -142,7 +142,7 @@ export default function Footer({ socialLinks = [] }: FooterProps) {
           <div className="min-w-0 md:col-start-4">
             <div className="mb-5 flex justify-start">
               <Image
-                src="/logo/AFC-logo-mark-light.svg"
+                src="/assets/logos/afc-mark-light.svg"
                 alt={labels.logoAlt}
                 width={40}
                 height={40}
