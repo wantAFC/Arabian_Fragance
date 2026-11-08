@@ -195,7 +195,7 @@ export default async function AboutPage({ params }: PageProps) {
     heroTitle: dict.aboutPage.heroTitle,
     heroSubtitle: dict.aboutPage.heroSubtitle,
     heroImage: {
-      url: "/about/aboutusPicture.jpg",
+      url: "/assets/images/pages/about-hero.jpg",
       altText: null,
       width: 1920,
       height: 1080,
@@ -204,7 +204,7 @@ export default async function AboutPage({ params }: PageProps) {
     storyTitle: dict.aboutPage.storyTitle,
     storyText: dict.aboutPage.storyDescriptions.join("\n\n"),
     storyImage: {
-      url: "/hero/story.jpg",
+      url: "/assets/images/hero/about-story.jpg",
       altText: null,
       width: 800,
       height: 1000,
@@ -212,14 +212,14 @@ export default async function AboutPage({ params }: PageProps) {
     fragrancesTitle: dict.aboutPage.perfumesTitle,
     fragrancesText: dict.aboutPage.perfumesDescriptions.join("\n\n"),
     fragrancesImage: {
-      url: "/collections/collection-desert-oud.jpg",
+      url: "/assets/images/pages/about-fragrances.jpg",
       altText: null,
       width: 800,
       height: 1000,
     },
     closingText: dict.aboutPage.fullImageParagraph,
     closingImage: {
-      url: "/about/aboutusPicture2.jpg",
+      url: "/assets/images/pages/about-closing.jpg",
       altText: null,
       width: 1920,
       height: 1080,

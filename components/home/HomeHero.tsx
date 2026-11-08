@@ -40,7 +40,6 @@ export default function HomeHero({ hero }: HomeHeroProps) {
 
   const imageStyle = {
     "--hero-mobile-ratio": `${mobileWidth} / ${mobileHeight}`,
-    "--hero-desktop-ratio": `${desktopWidth} / ${desktopHeight}`,
   } as CSSProperties;
 
   return (
@@ -51,7 +50,7 @@ export default function HomeHero({ hero }: HomeHeroProps) {
     >
       <div
         style={imageStyle}
-        className="relative aspect-[var(--hero-mobile-ratio)] w-full md:aspect-[var(--hero-desktop-ratio)]"
+        className="relative aspect-[var(--hero-mobile-ratio)] w-full md:aspect-auto md:h-[calc(100svh-64px)] lg:h-[calc(100svh-116px)]"
       >
         <picture>
           <source
@@ -64,7 +63,7 @@ export default function HomeHero({ hero }: HomeHeroProps) {
             {...desktopProps}
             alt=""
             decoding="async"
-            className="absolute inset-0 h-full w-full object-contain"
+            className="absolute inset-0 h-full w-full object-contain md:object-cover md:object-center"
           />
         </picture>
 

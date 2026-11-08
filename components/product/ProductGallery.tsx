@@ -33,7 +33,7 @@ export default function ProductGallery({
   const galleryImages =
     selectedImages.length > 0
       ? selectedImages
-      : [{ url: "/catalog/Bottle_3.png", altText: name }];
+      : [{ url: "/assets/images/shop/product-fallback.png", altText: name }];
 
   return (
     <div

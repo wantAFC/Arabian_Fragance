@@ -115,7 +115,7 @@ function CartItemRow({
               ? "(min-width: 640px) 112px, 80px"
               : "(min-width: 768px) 144px, 80px"
           }
-          src={item.image || "/catalog/Bottle_3.png"}
+          src={item.image || "/assets/images/shop/product-fallback.png"}
           alt={item.name || labels.productImageAltFallback}
           className="object-cover"
         />

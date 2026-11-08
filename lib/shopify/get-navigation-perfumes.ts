@@ -11,6 +11,9 @@ export type NavigationPerfume = {
   image: string;
 };
 
+const NAVIGATION_PERFUME_FALLBACK_IMAGE =
+  "/assets/images/shop/product-fallback.png";
+
 const FEATURED_HANDLES = new Set([
   "honey-musk",
   "amber-amber",
@@ -28,18 +31,13 @@ export async function getNavigationPerfumes(
     .filter(
       (product) => isPerfume(product) && FEATURED_HANDLES.has(product.slug),
     )
-    .flatMap((product) => {
-      const image = product.images?.[0] || product.image;
-
-      if (!image) return [];
-
-      return [
-        {
-          id: product.id,
-          handle: product.slug,
-          name: product.name,
-          image,
-        },
-      ];
-    });
+    .map((product) => ({
+      id: product.id,
+      handle: product.slug,
+      name: product.name,
+      image:
+        product.images?.[0] ||
+        product.image ||
+        NAVIGATION_PERFUME_FALLBACK_IMAGE,
+    }));
 }

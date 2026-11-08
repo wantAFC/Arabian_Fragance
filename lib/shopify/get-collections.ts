@@ -50,39 +50,45 @@ const FALLBACK_COLLECTIONS: Record<
   Record<TierKey, { title: string; imageSrc: string }>
 > = {
   en: {
-    luxury: { title: "Luxury Collection", imageSrc: "/shop/bottle-men.png" },
+    luxury: {
+      title: "Luxury Collection",
+      imageSrc: "/assets/images/shop/bottle-men.png",
+    },
     premium: {
       title: "Premium Collection",
-      imageSrc: "/shop/premium_collection.png",
+      imageSrc: "/assets/images/shop/premium-collection.png",
     },
     essential: {
       title: "Essential Collection",
-      imageSrc: "/shop/bottle-women.png",
+      imageSrc: "/assets/images/shop/bottle-women.png",
     },
   },
   fi: {
-    luxury: { title: "Luxury-kokoelma", imageSrc: "/shop/bottle-men.png" },
+    luxury: {
+      title: "Luxury-kokoelma",
+      imageSrc: "/assets/images/shop/bottle-men.png",
+    },
     premium: {
       title: "Premium-kokoelma",
-      imageSrc: "/shop/premium_collection.png",
+      imageSrc: "/assets/images/shop/premium-collection.png",
     },
     essential: {
       title: "Essential-kokoelma",
-      imageSrc: "/shop/bottle-women.png",
+      imageSrc: "/assets/images/shop/bottle-women.png",
     },
   },
   sv: {
     luxury: {
       title: "Luxury-kollektionen",
-      imageSrc: "/shop/bottle-men.png",
+      imageSrc: "/assets/images/shop/bottle-men.png",
     },
     premium: {
       title: "Premium-kollektionen",
-      imageSrc: "/shop/premium_collection.png",
+      imageSrc: "/assets/images/shop/premium-collection.png",
     },
     essential: {
       title: "Essential-kollektionen",
-      imageSrc: "/shop/bottle-women.png",
+      imageSrc: "/assets/images/shop/bottle-women.png",
     },
   },
 };

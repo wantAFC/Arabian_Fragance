@@ -157,7 +157,7 @@ export default async function ShowroomPage({ params }: PageProps) {
   const visitLabels = VISIT_LABELS[locale] ?? VISIT_LABELS.en;
 
   const fallbackImage: ShowroomPageImage = {
-    url: "/showroom/example_shop.avif",
+    url: "/assets/images/showroom/preview.avif",
     altText: heroLabels.imageAlt,
     width: 1920,
     height: 1080,

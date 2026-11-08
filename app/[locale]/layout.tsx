@@ -16,7 +16,7 @@ import { i18n } from "@/i18n-config";
 import { getFooterSocialLinks } from "@/lib/shopify/get-footer-social-links";
 
 const magister = localFont({
-  src: "../../public/fonts/Magister-Extended.otf",
+  src: "../../public/assets/fonts/Magister-Extended.otf",
   variable: "--font-magister",
   display: "swap",
 });
@@ -43,7 +43,7 @@ const geistCarlito = Carlito({
 });
 
 const bodoni = localFont({
-  src: "../../public/fonts/BodoniModa-Variable.woff2",
+  src: "../../public/assets/fonts/BodoniModa-Variable.woff2",
   weight: "500 600",
   variable: "--font-bodoni",
   display: "swap",
