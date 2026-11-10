@@ -21,15 +21,27 @@ export type ShowroomPageContent = {
   openingHours: string;
   phone: string;
   email: string;
+  galleryImages: ShowroomPageImage[];
+};
+
+type MediaImageNode = {
+  image?: ShowroomPageImage | null;
 };
 
 type MetaobjectField = {
   key: string;
   value: string | null;
-  reference: {
-    image?: ShowroomPageImage | null;
+  reference: MediaImageNode | null;
+  references: {
+    nodes: MediaImageNode[];
   } | null;
 };
+
+function hasImageUrl(
+  image: ShowroomPageImage | null | undefined,
+): image is ShowroomPageImage {
+  return Boolean(image?.url);
+}
 
 type ShowroomPageOperation = {
   data?: {
@@ -60,6 +72,19 @@ const showroomPageQuery = `
               altText
               width
               height
+            }
+          }
+        }
+
+        references(first: 100) {
+          nodes {
+            ... on MediaImage {
+              image {
+                url
+                altText
+                width
+                height
+              }
             }
           }
         }
@@ -123,7 +148,13 @@ export async function getShowroomPage(
     function getImage(key: string): ShowroomPageImage | null {
       const image = fields.get(key)?.reference?.image;
 
-      return image?.url ? image : null;
+      return hasImageUrl(image) ? image : null;
+    }
+
+    function getImageList(key: string): ShowroomPageImage[] {
+      const nodes = fields.get(key)?.references?.nodes ?? [];
+
+      return nodes.map((node) => node.image).filter(hasImageUrl);
     }
 
     function requireImage(key: string): ShowroomPageImage {
@@ -148,6 +179,7 @@ export async function getShowroomPage(
       openingHours: getText("opening_hours"),
       phone: getText("phone"),
       email: getText("email"),
+      galleryImages: getImageList("gallery_images"),
     };
   } catch (error) {
     console.error("[Showroom Page] Using fallback content:", error);

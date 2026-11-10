@@ -2,6 +2,7 @@ import { getImageProps } from "next/image";
 import SmoothImage from "@/components/ui/SmoothImage";
 import { getDictionary } from "@/dictionaries/getDictionary";
 import type { Locale } from "@/i18n-config";
+import ShowroomGallery from "@/components/showroom/ShowroomGallery";
 import { getUiLabels } from "@/lib/i18n/uiLabels";
 import {
   getShowroomPage,
@@ -175,6 +176,7 @@ export default async function ShowroomPage({ params }: PageProps) {
     openingHours: "",
     phone: "",
     email: "",
+    galleryImages: [],
   };
 
   const content = shopifyContent ?? fallbackContent;
@@ -294,7 +296,7 @@ export default async function ShowroomPage({ params }: PageProps) {
             </div>
           </div>
 
-          <div className="relative aspect-4/5 w-full overflow-hidden">
+          <div className="relative aspect-4/5 w-full overflow-hidden lg:aspect-square">
             <SmoothImage
               src={content.locationImage.url}
               alt={content.locationImage.altText ?? ""}
@@ -307,6 +309,8 @@ export default async function ShowroomPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      <ShowroomGallery images={content.galleryImages} />
     </div>
   );
 }
